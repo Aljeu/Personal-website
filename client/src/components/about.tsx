@@ -9,16 +9,8 @@ export default function About() {
           <div className="w-24 h-1 bg-gradient-blue mx-auto rounded-full"></div>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="order-2 lg:order-1">
-            <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600" 
-              alt="Aljhone Agnas - Professional Headshot" 
-              className="w-80 h-80 rounded-2xl shadow-2xl mx-auto object-cover border-4 border-slate-700 hover:border-blue-500 transition-all duration-300" 
-            />
-          </div>
-          
-          <div className="order-1 lg:order-2 space-y-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-6">
             <div className="prose prose-slate prose-lg">
               <p className="text-slate-300 text-lg leading-relaxed">
                 I'm a passionate Materials Engineering student at the University of the Philippines Diliman with a proven track record in project leadership and innovation. My journey spans from conducting cutting-edge research at DOST-ITDI to leading seven-figure revenue events.

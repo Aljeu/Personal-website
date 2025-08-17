@@ -114,30 +114,24 @@ export default function Resume() {
               <Cog className="text-blue-400 mr-3" />
               Technical Skills
             </h3>
-            <div className="grid grid-cols-1 gap-4">
-              <div className="bg-slate-800/50 p-4 rounded-lg border border-slate-700">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-slate-200 font-medium">Project Leadership</span>
-                  <span className="text-blue-400">●●●●●</span>
-                </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-slate-800/50 p-4 rounded-lg border border-slate-700 hover:border-blue-500 transition-all duration-300">
+                <span className="text-slate-200 font-medium">Project Leadership</span>
               </div>
-              <div className="bg-slate-800/50 p-4 rounded-lg border border-slate-700">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-slate-200 font-medium">3D Printing & Manufacturing</span>
-                  <span className="text-cyan-400">●●●●●</span>
-                </div>
+              <div className="bg-slate-800/50 p-4 rounded-lg border border-slate-700 hover:border-cyan-500 transition-all duration-300">
+                <span className="text-slate-200 font-medium">3D Printing & Manufacturing</span>
               </div>
-              <div className="bg-slate-800/50 p-4 rounded-lg border border-slate-700">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-slate-200 font-medium">Data Analysis (MATLAB)</span>
-                  <span className="text-blue-400">●●●●●</span>
-                </div>
+              <div className="bg-slate-800/50 p-4 rounded-lg border border-slate-700 hover:border-blue-500 transition-all duration-300">
+                <span className="text-slate-200 font-medium">Data Analysis (MATLAB)</span>
               </div>
-              <div className="bg-slate-800/50 p-4 rounded-lg border border-slate-700">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-slate-200 font-medium">Finance & Accounting</span>
-                  <span className="text-cyan-400">●●●●●</span>
-                </div>
+              <div className="bg-slate-800/50 p-4 rounded-lg border border-slate-700 hover:border-cyan-500 transition-all duration-300">
+                <span className="text-slate-200 font-medium">Finance & Accounting</span>
+              </div>
+              <div className="bg-slate-800/50 p-4 rounded-lg border border-slate-700 hover:border-blue-500 transition-all duration-300">
+                <span className="text-slate-200 font-medium">Data Organization (Excel)</span>
+              </div>
+              <div className="bg-slate-800/50 p-4 rounded-lg border border-slate-700 hover:border-cyan-500 transition-all duration-300">
+                <span className="text-slate-200 font-medium">Process Improvement</span>
               </div>
             </div>
           </div>
