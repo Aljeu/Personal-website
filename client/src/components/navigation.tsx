@@ -7,7 +7,7 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = document.querySelectorAll("section[id]");
+      const sections = document.querySelectorAll<HTMLElement>("section[id]");
       let current = "";
       
       sections.forEach((section) => {
