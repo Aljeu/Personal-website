@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
-import { Mail, Phone, MapPin, Send, Linkedin, Github, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Linkedin, Github, Twitter, Instagram } from "lucide-react";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -241,6 +241,14 @@ export default function Contact() {
                   className="w-12 h-12 bg-slate-800 hover:bg-red-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110"
                 >
                   <Mail className="text-slate-300 hover:text-white" size={24} />
+                </a>
+                <a
+                  href="https://instagram.com/aljeuagnas"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-slate-800 hover:bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-500 rounded-lg flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110"
+                >
+                  <Instagram className="text-slate-300 hover:text-white" size={24} />
                 </a>
               </div>
             </div>
