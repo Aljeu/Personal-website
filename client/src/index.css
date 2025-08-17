@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(221, 39%, 11%);
+  --foreground: hsl(210, 40%, 98%);
+  --card: hsl(222, 84%, 5%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --popover: hsl(222, 84%, 5%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --primary: hsl(217, 91%, 60%);
+  --primary-foreground: hsl(222, 84%, 5%);
+  --secondary: hsl(222, 47%, 11%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --muted: hsl(215, 28%, 17%);
+  --muted-foreground: hsl(217, 10%, 65%);
+  --accent: hsl(215, 28%, 17%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(215, 28%, 17%);
+  --input: hsl(215, 28%, 17%);
+  --ring: hsl(217, 91%, 60%);
+  --chart-1: hsl(217, 91%, 60%);
+  --chart-2: hsl(187, 85%, 53%);
+  --chart-3: hsl(42, 93%, 56%);
+  --chart-4: hsl(147, 78%, 42%);
+  --chart-5: hsl(341, 75%, 51%);
+  --navy-950: hsl(221, 39%, 11%);
+  --slate-800: hsl(215, 28%, 17%);
+  --slate-700: hsl(215, 20%, 27%);
+  --slate-600: hsl(215, 16%, 47%);
+  --slate-300: hsl(212, 13%, 82%);
+  --slate-400: hsl(214, 12%, 62%);
+  --blue-400: hsl(217, 91%, 60%);
+  --blue-500: hsl(217, 91%, 60%);
+  --blue-600: hsl(221, 83%, 53%);
+  --cyan-400: hsl(187, 85%, 53%);
+  --cyan-500: hsl(187, 85%, 53%);
+  --cyan-600: hsl(188, 85%, 46%);
+  --font-sans: 'Inter', 'system-ui', 'sans-serif';
+  --font-serif: 'Georgia', 'serif';
+  --font-mono: 'Menlo', 'monospace';
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: hsl(221, 39%, 11%);
+  --foreground: hsl(210, 40%, 98%);
+  --card: hsl(222, 84%, 5%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --popover: hsl(222, 84%, 5%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --primary: hsl(217, 91%, 60%);
+  --primary-foreground: hsl(222, 84%, 5%);
+  --secondary: hsl(222, 47%, 11%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --muted: hsl(215, 28%, 17%);
+  --muted-foreground: hsl(217, 10%, 65%);
+  --accent: hsl(215, 28%, 17%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(215, 28%, 17%);
+  --input: hsl(215, 28%, 17%);
+  --ring: hsl(217, 91%, 60%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+
+  .bg-navy-950 {
+    background-color: var(--navy-950);
+  }
+
+  .bg-slate-900 {
+    background-color: hsl(222, 47%, 11%);
+  }
+
+  .bg-slate-800 {
+    background-color: var(--slate-800);
+  }
+
+  .bg-slate-700 {
+    background-color: var(--slate-700);
+  }
+
+  .text-slate-50 {
+    color: hsl(210, 40%, 98%);
+  }
+
+  .text-slate-200 {
+    color: hsl(210, 40%, 92%);
+  }
+
+  .text-slate-300 {
+    color: var(--slate-300);
+  }
+
+  .text-slate-400 {
+    color: var(--slate-400);
+  }
+
+  .text-slate-600 {
+    color: var(--slate-600);
+  }
+
+  .text-blue-400 {
+    color: var(--blue-400);
+  }
+
+  .text-cyan-400 {
+    color: var(--cyan-400);
+  }
+
+  .border-slate-700 {
+    border-color: var(--slate-700);
+  }
+
+  .border-slate-800 {
+    border-color: var(--slate-800);
+  }
+
+  .border-blue-500 {
+    border-color: var(--blue-500);
+  }
+
+  .bg-blue-500 {
+    background-color: var(--blue-500);
+  }
+
+  .bg-cyan-500 {
+    background-color: var(--cyan-500);
+  }
+
+  .hover\:border-blue-500:hover {
+    border-color: var(--blue-500);
+  }
+
+  .hover\:border-cyan-500:hover {
+    border-color: var(--cyan-500);
+  }
+
+  .hover\:text-blue-400:hover {
+    color: var(--blue-400);
+  }
+
+  .hover\:text-cyan-400:hover {
+    color: var(--cyan-400);
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    0% { 
+      opacity: 0; 
+      transform: translateY(30px); 
+    }
+    100% { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .bg-gradient-dark {
+    background: linear-gradient(to bottom right, var(--navy-950), var(--slate-800), var(--navy-950));
+  }
+
+  .bg-gradient-blue {
+    background: linear-gradient(to right, var(--blue-600), var(--cyan-600));
+  }
+
+  .text-gradient {
+    background: linear-gradient(to right, var(--blue-400), var(--cyan-400), var(--blue-600));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
