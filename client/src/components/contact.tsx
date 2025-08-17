@@ -243,7 +243,7 @@ export default function Contact() {
                   <Mail className="text-slate-300 hover:text-white" size={24} />
                 </a>
                 <a
-                  href="https://instagram.com/aljeuagnas"
+                  href="https://www.instagram.com/agnasalj"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-slate-800 hover:bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-500 rounded-lg flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110"
