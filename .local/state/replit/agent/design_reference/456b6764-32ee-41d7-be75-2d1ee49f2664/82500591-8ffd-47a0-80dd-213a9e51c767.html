@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aljhone Lauro Agnas - Materials Engineering Professional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    'sans': ['Inter', 'system-ui', 'sans-serif']
+                },
+                colors: {
+                    'navy': '#1e293b',
+                    'charcoal': '#334155',
+                    'light-gray': '#f8fafc',
+                    'accent': '#3b82f6'
+                },
+                animation: {
+                    'fade-in': 'fadeIn 0.6s ease-out',
+                    'slide-up': 'slideUp 0.8s ease-out'
+                }
+            }
+        }
+    };
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .fade-in-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .skill-bar {
+            transition: width 1.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="font-sans text-charcoal bg-white">
+
+    <!-- @COMPONENT: Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-xl font-bold text-navy">A.L. Agnas</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-charcoal hover:text-accent transition-colors font-medium">Home</a>
+                    <a href="#about" class="text-charcoal hover:text-accent transition-colors font-medium">About</a>
+                    <a href="#resume" class="text-charcoal hover:text-accent transition-colors font-medium">Resume</a>
+                    <a href="#portfolio" class="text-charcoal hover:text-accent transition-colors font-medium">Portfolio</a>
+                    <a href="#contact" class="text-charcoal hover:text-accent transition-colors font-medium">Contact</a>
+                </div>
+                <button class="md:hidden text-charcoal hover:text-accent" data-event="click:toggleMobileMenu">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- @COMPONENT: Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center">
+        <!-- Modern engineering laboratory with advanced materials testing equipment -->
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+             style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080');">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-br from-navy/80 via-navy/70 to-charcoal/60"></div>
+        
+        <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+                Aljhone Lauro <span class="text-accent">Agnas</span>
+            </h1>
+            <p class="text-xl md:text-2xl font-light mb-4 opacity-90">Materials Engineering Professional</p>
+            <p class="text-lg md:text-xl mb-8 opacity-80 max-w-2xl mx-auto leading-relaxed">
+                Innovating at the intersection of materials science, project leadership, and cutting-edge 3D printing technology
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#resume" class="bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg">
+                    View My Resume
+                </a>
+                <a href="#portfolio" class="border-2 border-white text-white hover:bg-white hover:text-navy px-8 py-3 rounded-full font-medium transition-all">
+                    Explore My Work
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: About Me Section -->
+    <section id="about" class="py-20 bg-light-gray">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in-scroll">
+                <h2 class="text-4xl font-bold text-navy mb-4">About Me</h2>
+                <p class="text-lg text-charcoal/80 max-w-2xl mx-auto">
+                    Passionate materials engineer with expertise in 3D printing, project leadership, and innovative problem-solving
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-scroll">
+                    <!-- Professional headshot of a young materials engineer in laboratory setting -->
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800" 
+                         alt="Professional headshot" 
+                         class="w-full max-w-md mx-auto rounded-2xl shadow-xl">
+                </div>
+                
+                <div class="fade-in-scroll">
+                    <h3 class="text-2xl font-bold text-navy mb-6">Materials Engineering Excellence</h3>
+                    <p class="text-charcoal/80 mb-6 leading-relaxed">
+                        As a BS Materials Engineering student at the University of the Philippines Diliman, I combine academic excellence with real-world experience in materials science, 3D printing technology, and large-scale project management.
+                    </p>
+                    <p class="text-charcoal/80 mb-8 leading-relaxed">
+                        My experience spans from research internships at DOST-ITDI's Materials Science Division to leading multi-million peso events like UP Fair Kalye Tunes, where I generated seven-figure revenues while managing cross-functional teams.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <h4 class="text-xl font-semibold text-navy mb-4">Core Competencies</h4>
+                        
+                        <!-- Project Leadership -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-charcoal">Project Leadership</span>
+                                <span class="text-charcoal/70">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar bg-accent h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- 3D Printing & Materials Science -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-charcoal">3D Printing & Materials Science</span>
+                                <span class="text-charcoal/70">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar bg-accent h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Data Analysis (MATLAB) -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-charcoal">Data Analysis (MATLAB)</span>
+                                <span class="text-charcoal/70">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar bg-accent h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Finance & Accounting -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-charcoal">Finance & Accounting</span>
+                                <span class="text-charcoal/70">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar bg-accent h-2 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-3 mt-8">
+                        <span class="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
+                            <i class="fas fa-cube mr-2"></i>3D Printing
+                        </span>
+                        <span class="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
+                            <i class="fas fa-chart-line mr-2"></i>MATLAB
+                        </span>
+                        <span class="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
+                            <i class="fas fa-users mr-2"></i>Team Leadership
+                        </span>
+                        <span class="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
+                            <i class="fas fa-flask mr-2"></i>Materials Science
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: About Me Section -->
+
+    <!-- @COMPONENT: Resume Section -->
+    <section id="resume" class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in-scroll">
+                <h2 class="text-4xl font-bold text-navy mb-4">Resume</h2>
+                <p class="text-lg text-charcoal/80 max-w-2xl mx-auto">
+                    A comprehensive overview of my educational journey, professional experience, and achievements
+                </p>
+            </div>
+            
+            <!-- Education Section -->
+            <div class="mb-16 fade-in-scroll">
+                <h3 class="text-2xl font-bold text-navy mb-8 flex items-center">
+                    <i class="fas fa-graduation-cap text-accent mr-3"></i>
+                    Education & Certifications
+                </h3>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex items-start">
+                            <div class="bg-accent/10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-university text-accent text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy text-lg">University of the Philippines Diliman</h4>
+                                <p class="text-accent font-medium">BS Materials Engineering</p>
+                                <p class="text-charcoal/70 text-sm">Undergraduate Program</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex items-start">
+                            <div class="bg-accent/10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-atom text-accent text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy text-lg">Philippine Science High School</h4>
+                                <p class="text-accent font-medium">Physics Track</p>
+                                <p class="text-charcoal/70 text-sm">Graduated 2019 - Bicol Region</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex items-start">
+                            <div class="bg-accent/10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-certificate text-accent text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy text-lg">Six Sigma Certification</h4>
+                                <p class="text-accent font-medium">White Belt</p>
+                                <p class="text-charcoal/70 text-sm">Completed 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex items-start">
+                            <div class="bg-accent/10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-globe text-accent text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy text-lg">EFSET Certification</h4>
+                                <p class="text-accent font-medium">C2 English Proficiency</p>
+                                <p class="text-charcoal/70 text-sm">Advanced Level</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Experience Timeline -->
+            <div class="fade-in-scroll">
+                <h3 class="text-2xl font-bold text-navy mb-8 flex items-center">
+                    <i class="fas fa-briefcase text-accent mr-3"></i>
+                    Professional Experience
+                </h3>
+                
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-accent/30 hidden md:block"></div>
+                    
+                    <!-- Experience Items -->
+                    <div class="space-y-8">
+                        <!-- DOST-ITDI Intern -->
+                        <div class="relative">
+                            <div class="md:ml-16 bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                                <div class="absolute left-6 w-4 h-4 bg-accent rounded-full -translate-x-1/2 hidden md:block"></div>
+                                <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-bold text-navy">Intern</h4>
+                                        <p class="text-accent font-medium">DOST - ITDI, Materials Science Division</p>
+                                    </div>
+                                    <span class="text-charcoal/70 bg-accent/10 px-3 py-1 rounded-full text-sm font-medium">
+                                        June 2025 - Aug 2025
+                                    </span>
+                                </div>
+                                <ul class="text-charcoal/80 space-y-2">
+                                    <li class="flex items-start"><i class="fas fa-check text-accent mt-1 mr-3"></i>Trained on 3D printing workflow and manufacturing optimization</li>
+                                    <li class="flex items-start"><i class="fas fa-check text-accent mt-1 mr-3"></i>Applied materials knowledge to improve properties and production processes</li>
+                                    <li class="flex items-start"><i class="fas fa-check text-accent mt-1 mr-3"></i>Assisted in MAST3R projects across multiple engineering fields</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- UP Fair Director -->
+                        <div class="relative">
+                            <div class="md:ml-16 bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                                <div class="absolute left-6 w-4 h-4 bg-accent rounded-full -translate-x-1/2 hidden md:block"></div>
+                                <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-bold text-navy">Director</h4>
+                                        <p class="text-accent font-medium">UP Fair Kalye Tunes 2025</p>
+                                    </div>
+                                    <span class="text-charcoal/70 bg-accent/10 px-3 py-1 rounded-full text-sm font-medium">
+                                        Nov 2024 - Apr 2025
+                                    </span>
+                                </div>
+                                <ul class="text-charcoal/80 space-y-2">
+                                    <li class="flex items-start"><i class="fas fa-check text-accent mt-1 mr-3"></i>Co-led execution of flagship hip-hop event advocating for urban communities</li>
+                                    <li class="flex items-start"><i class="fas fa-check text-accent mt-1 mr-3"></i>Generated seven figures in sales and revenue with optimized cost management</li>
+                                    <li class="flex items-start"><i class="fas fa-check text-accent mt-1 mr-3"></i>Managed cross-functional teams across Finance, Security, Artists, and Logistics</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Marketing & Finance Head -->
+                        <div class="relative">
+                            <div class="md:ml-16 bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                                <div class="absolute left-6 w-4 h-4 bg-accent rounded-full -translate-x-1/2 hidden md:block"></div>
+                                <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                                    <div>
+                                        <h4 class="text-xl font-bold text-navy">Head of Marketing and Finance</h4>
+                                        <p class="text-accent font-medium">National Mining, Metallurgical, and Materials Engineering Summit 2025</p>
+                                    </div>
+                                    <span class="text-charcoal/70 bg-accent/10 px-3 py-1 rounded-full text-sm font-medium">
+                                        Dec 2024 - Apr 2025
+                                    </span>
+                                </div>
+                                <ul class="text-charcoal/80 space-y-2">
+                                    <li class="flex items-start"><i class="fas fa-check text-accent mt-1 mr-3"></i>Secured seven company partnerships and six-figure sponsorships</li>
+                                    <li class="flex items-start"><i class="fas fa-check text-accent mt-1 mr-3"></i>Led corporate relations through strategic negotiations and contracts</li>
+                                    <li class="flex items-start"><i class="fas fa-check text-accent mt-1 mr-3"></i>Managed complete financial oversight for national summit</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Resume Section -->
+
+    <!-- @COMPONENT: Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-light-gray">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in-scroll">
+                <h2 class="text-4xl font-bold text-navy mb-4">Portfolio & Projects</h2>
+                <p class="text-lg text-charcoal/80 max-w-2xl mx-auto">
+                    Showcasing my expertise in materials engineering, project management, and innovative solutions
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 3D Printing Research Project -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-scroll">
+                    <!-- Advanced 3D printer creating complex materials engineering components -->
+                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500" 
+                         alt="3D printing research" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy mb-3">3D Printing Optimization Research</h3>
+                        <p class="text-charcoal/80 mb-4">
+                            Advanced research at DOST-ITDI focusing on manufacturing workflow optimization and material property enhancement.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Materials Science</span>
+                            <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">3D Printing</span>
+                        </div>
+                        <button class="w-full bg-accent hover:bg-accent/90 text-white py-2 px-4 rounded-lg font-medium transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- UP Fair Kalye Tunes Project -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-scroll">
+                    <!-- Large outdoor concert event with hip-hop stage performance and crowds -->
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500" 
+                         alt="UP Fair Kalye Tunes event" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy mb-3">UP Fair Kalye Tunes Leadership</h3>
+                        <p class="text-charcoal/80 mb-4">
+                            Led flagship hip-hop event generating seven-figure revenue while advocating for urban communities.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Event Management</span>
+                            <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Leadership</span>
+                        </div>
+                        <button class="w-full bg-accent hover:bg-accent/90 text-white py-2 px-4 rounded-lg font-medium transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Materials Engineering Summit -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-scroll">
+                    <!-- Professional engineering conference with modern presentation setup and attendees -->
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500" 
+                         alt="Engineering summit conference" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy mb-3">National Engineering Summit</h3>
+                        <p class="text-charcoal/80 mb-4">
+                            Secured major partnerships and six-figure sponsorships for national materials engineering conference.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Business Development</span>
+                            <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Partnerships</span>
+                        </div>
+                        <button class="w-full bg-accent hover:bg-accent/90 text-white py-2 px-4 rounded-lg font-medium transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- MATLAB Data Analysis -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-scroll">
+                    <!-- Computer screen showing MATLAB interface with data visualization and analysis -->
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500" 
+                         alt="MATLAB data analysis" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy mb-3">Advanced Data Analysis</h3>
+                        <p class="text-charcoal/80 mb-4">
+                            Specialized MATLAB analysis for materials properties and engineering optimization projects.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">MATLAB</span>
+                            <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Data Analysis</span>
+                        </div>
+                        <button class="w-full bg-accent hover:bg-accent/90 text-white py-2 px-4 rounded-lg font-medium transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Process Improvement Project -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-scroll">
+                    <!-- Industrial manufacturing process with quality control and optimization systems -->
+                    <img src="https://pixabay.com/get/gca022b0642629669aa449309106f164aa6c332eb45e5a18a42a7afed53c7ebee65eb39d9ad3a18d34c291ee8ccfa2e302ce1ec14bc262b975ea05e274a1e3316_1280.jpg" 
+                         alt="Process improvement manufacturing" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy mb-3">Process Improvement Initiative</h3>
+                        <p class="text-charcoal/80 mb-4">
+                            Six Sigma methodology application for manufacturing process optimization and quality enhancement.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Six Sigma</span>
+                            <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Process Optimization</span>
+                        </div>
+                        <button class="w-full bg-accent hover:bg-accent/90 text-white py-2 px-4 rounded-lg font-medium transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Finance Management System -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in-scroll">
+                    <!-- Financial dashboard with charts, graphs and budget analysis on computer screen -->
+                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500" 
+                         alt="Financial management dashboard" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-navy mb-3">Financial Management System</h3>
+                        <p class="text-charcoal/80 mb-4">
+                            Comprehensive financial oversight and budget optimization for large-scale events and projects.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Financial Planning</span>
+                            <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Budget Management</span>
+                        </div>
+                        <button class="w-full bg-accent hover:bg-accent/90 text-white py-2 px-4 rounded-lg font-medium transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Portfolio Section -->
+
+    <!-- @COMPONENT: Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in-scroll">
+                <h2 class="text-4xl font-bold text-navy mb-4">Get In Touch</h2>
+                <p class="text-lg text-charcoal/80 max-w-2xl mx-auto">
+                    Ready to collaborate on innovative materials engineering projects or discuss opportunities? Let's connect!
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div class="fade-in-scroll">
+                    <h3 class="text-2xl font-bold text-navy mb-6">Contact Information</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center p-4 bg-light-gray rounded-xl">
+                            <div class="bg-accent/10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-envelope text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-navy">Email</h4>
+                                <p class="text-charcoal/80" data-bind="contact.email">afagnas@up.edu.ph</p>
+                                <p class="text-charcoal/80" data-bind="contact.altEmail">agnasaljhone@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center p-4 bg-light-gray rounded-xl">
+                            <div class="bg-accent/10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-phone text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-navy">Phone</h4>
+                                <p class="text-charcoal/80" data-bind="contact.phone">+63949-192-3652</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center p-4 bg-light-gray rounded-xl">
+                            <div class="bg-accent/10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-map-marker-alt text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-navy">Location</h4>
+                                <p class="text-charcoal/80" data-bind="contact.address">Quezon City, Philippines</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-semibold text-navy mb-4">Connect with me</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://linkedin.com/in/aljhoneagnas" 
+                               class="bg-accent/10 hover:bg-accent hover:text-white text-accent p-3 rounded-lg transition-colors">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="mailto:afagnas@up.edu.ph" 
+                               class="bg-accent/10 hover:bg-accent hover:text-white text-accent p-3 rounded-lg transition-colors">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </a>
+                            <a href="#" 
+                               class="bg-accent/10 hover:bg-accent hover:text-white text-accent p-3 rounded-lg transition-colors">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="fade-in-scroll">
+                    <form class="space-y-6" data-event="submit:handleContactForm">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-navy mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-navy mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-navy mb-2">Subject</label>
+                            <select id="subject" name="subject" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors">
+                                <option value="">Select a topic</option>
+                                <option value="collaboration">Project Collaboration</option>
+                                <option value="internship">Internship Opportunity</option>
+                                <option value="research">Research Partnership</option>
+                                <option value="consulting">Consulting Inquiry</option>
+                                <option value="general">General Question</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-navy mb-2">Message</label>
+                            <textarea id="message" name="message" rows="6" required
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
+                                      placeholder="Tell me about your project or inquiry..."></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-accent hover:bg-accent/90 text-white py-3 px-6 rounded-lg font-medium transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Contact Section -->
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-navy text-white py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Aljhone Lauro Agnas</h3>
+                    <p class="text-white/80 mb-4">
+                        Materials Engineering Professional passionate about innovation, leadership, and sustainable solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://linkedin.com/in/aljhoneagnas" 
+                           class="text-white/80 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="mailto:afagnas@up.edu.ph" 
+                           class="text-white/80 hover:text-white transition-colors">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                        <a href="#" 
+                           class="text-white/80 hover:text-white transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-white/80 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-white/80 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#resume" class="text-white/80 hover:text-white transition-colors">Resume</a></li>
+                        <li><a href="#portfolio" class="text-white/80 hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="#contact" class="text-white/80 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Expertise</h4>
+                    <ul class="space-y-2 text-white/80">
+                        <li>Materials Engineering</li>
+                        <li>3D Printing Technology</li>
+                        <li>Project Leadership</li>
+                        <li>Data Analysis (MATLAB)</li>
+                        <li>Financial Management</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/20 mt-8 pt-8 text-center">
+                <p class="text-white/80">
+                    © 2025 Aljhone Lauro Agnas. All rights reserved. 
+                    <span data-mock="true">Built with passion for engineering excellence.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        (function() {
+            // TODO: Implement business logic, API calls, or state management
+            
+            // Scroll Animation Observer
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all fade-in-scroll elements
+            document.querySelectorAll('.fade-in-scroll').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Animate skill bars when About section is visible
+            const aboutSection = document.getElementById('about');
+            const skillObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const skillBars = entry.target.querySelectorAll('.skill-bar');
+                        skillBars.forEach(bar => {
+                            const width = bar.style.width;
+                            bar.style.width = '0%';
+                            setTimeout(() => {
+                                bar.style.width = width;
+                            }, 300);
+                        });
+                        skillObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            if (aboutSection) {
+                skillObserver.observe(aboutSection);
+            }
+
+            // Smooth scroll for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const offsetTop = target.offsetTop - 80;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Contact form handling (placeholder)
+            const contactForm = document.querySelector('form[data-event="submit:handleContactForm"]');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // TODO: Implement form submission logic
+                    console.log('Form submitted - implement backend integration');
+                    alert('Thank you for your message! I will get back to you soon.');
+                });
+            }
+
+            // Mobile menu toggle (placeholder)
+            const mobileMenuToggle = document.querySelector('[data-event="click:toggleMobileMenu"]');
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    // TODO: Implement mobile menu functionality
+                    console.log('Mobile menu toggle - implement mobile navigation');
+                });
+            }
+
+            // Active navigation highlighting
+            function updateActiveNav() {
+                const sections = document.querySelectorAll('section[id]');
+                const navLinks = document.querySelectorAll('nav a[href^="#"]');
+                
+                let currentSection = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    if (window.scrollY >= sectionTop) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('text-accent');
+                    if (link.getAttribute('href') === `#${currentSection}`) {
+                        link.classList.add('text-accent');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', updateActiveNav);
+            updateActiveNav(); // Initial call
+        })();
+    </script>
+</body>
+</html>

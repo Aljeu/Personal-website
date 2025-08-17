@@ -1,0 +1,728 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aljhone Agnas - Materials Engineer & Project Leader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'navy': {
+                            50: '#f8fafc',
+                            900: '#0f172a',
+                            950: '#020617'
+                        },
+                        'slate': {
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a'
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-navy-950 text-slate-50 font-sans">
+    <!-- @COMPONENT: Navigation [sticky header with smooth scroll] -->
+    <nav class="fixed top-0 w-full bg-navy-950/95 backdrop-blur-sm border-b border-slate-800/50 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <span class="text-2xl font-bold text-blue-400">AA</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-slate-300 hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors duration-200">Home</a>
+                        <a href="#about" class="nav-link text-slate-300 hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors duration-200">About</a>
+                        <a href="#resume" class="nav-link text-slate-300 hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors duration-200">Resume</a>
+                        <a href="#portfolio" class="nav-link text-slate-300 hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors duration-200">Portfolio</a>
+                        <a href="#contact" class="nav-link text-slate-300 hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors duration-200">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-slate-300 hover:text-blue-400">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-navy-900/95 backdrop-blur-sm">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="nav-link block text-slate-300 hover:text-blue-400 px-3 py-2 text-base font-medium">Home</a>
+                <a href="#about" class="nav-link block text-slate-300 hover:text-blue-400 px-3 py-2 text-base font-medium">About</a>
+                <a href="#resume" class="nav-link block text-slate-300 hover:text-blue-400 px-3 py-2 text-base font-medium">Resume</a>
+                <a href="#portfolio" class="nav-link block text-slate-300 hover:text-blue-400 px-3 py-2 text-base font-medium">Portfolio</a>
+                <a href="#contact" class="nav-link block text-slate-300 hover:text-blue-400 px-3 py-2 text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- @COMPONENT: Hero Section [main landing with background and CTA] -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Modern engineering workspace background with subtle overlay -->
+        <div class="absolute inset-0 bg-gradient-to-br from-navy-950 via-slate-900 to-navy-950">
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080')] bg-cover bg-center opacity-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-transparent to-navy-950/60"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+            <div class="animate-slide-up">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
+                    Aljhone Agnas
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-medium text-slate-300 mb-8">
+                    Materials Engineer & Project Leader
+                </h2>
+                <p class="text-lg md:text-xl text-slate-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+                    Crafting innovative solutions at the intersection of materials science, project management, and sustainable engineering. 
+                    Transforming ideas into impactful realities through strategic leadership and technical excellence.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#resume" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-blue-500/25">
+                        <i class="fas fa-file-alt mr-2"></i>
+                        View My Resume
+                    </a>
+                    <a href="#portfolio" class="inline-flex items-center px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300">
+                        <i class="fas fa-briefcase mr-2"></i>
+                        Explore My Work
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating animation element -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-float">
+            <a href="#about" class="text-slate-400 hover:text-blue-400 transition-colors duration-300">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: About Section [profile info and skills] -->
+    <section id="about" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-50 mb-4">About Me</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <!-- Professional headshot placeholder for engineering professional -->
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600" 
+                         alt="Aljhone Agnas - Professional Headshot" 
+                         class="w-80 h-80 rounded-2xl shadow-2xl mx-auto object-cover border-4 border-slate-700 hover:border-blue-500 transition-all duration-300" 
+                         data-mock="true">
+                </div>
+                
+                <div class="order-1 lg:order-2 space-y-6">
+                    <div class="prose prose-slate prose-lg">
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            I'm a passionate Materials Engineering student at the University of the Philippines Diliman with a proven track record in project leadership and innovation. My journey spans from conducting cutting-edge research at DOST-ITDI to leading seven-figure revenue events.
+                        </p>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Currently exploring the fascinating world of 3D printing and materials science while developing strategic leadership skills through various organizational roles. I believe in the power of combining technical expertise with effective project management to create meaningful impact.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-6 mt-8">
+                        <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-blue-500 transition-all duration-300">
+                            <div class="text-3xl text-blue-400 mb-3">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3 class="text-slate-200 font-semibold mb-2">Education</h3>
+                            <p class="text-slate-400 text-sm">BS Materials Engineering<br>UP Diliman</p>
+                        </div>
+                        <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-blue-500 transition-all duration-300">
+                            <div class="text-3xl text-cyan-400 mb-3">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <h3 class="text-slate-200 font-semibold mb-2">Research</h3>
+                            <p class="text-slate-400 text-sm">3D Printing & Materials<br>DOST-ITDI</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Skills Icons -->
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold text-slate-200 mb-6">Core Competencies</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="flex flex-col items-center p-4 bg-slate-800/30 rounded-lg hover:bg-slate-800/50 transition-all duration-300">
+                                <i class="fas fa-cube text-2xl text-blue-400 mb-2"></i>
+                                <span class="text-slate-300 text-sm font-medium">3D Printing</span>
+                            </div>
+                            <div class="flex flex-col items-center p-4 bg-slate-800/30 rounded-lg hover:bg-slate-800/50 transition-all duration-300">
+                                <i class="fas fa-chart-line text-2xl text-cyan-400 mb-2"></i>
+                                <span class="text-slate-300 text-sm font-medium">MATLAB</span>
+                            </div>
+                            <div class="flex flex-col items-center p-4 bg-slate-800/30 rounded-lg hover:bg-slate-800/50 transition-all duration-300">
+                                <i class="fas fa-users text-2xl text-blue-400 mb-2"></i>
+                                <span class="text-slate-300 text-sm font-medium">Leadership</span>
+                            </div>
+                            <div class="flex flex-col items-center p-4 bg-slate-800/30 rounded-lg hover:bg-slate-800/50 transition-all duration-300">
+                                <i class="fas fa-calculator text-2xl text-cyan-400 mb-2"></i>
+                                <span class="text-slate-300 text-sm font-medium">Finance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: About Section -->
+
+    <!-- @COMPONENT: Resume Section [timeline with experience and education] -->
+    <section id="resume" class="py-20 bg-navy-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-50 mb-4">My Journey</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto rounded-full"></div>
+                <p class="text-slate-400 mt-6 text-lg max-w-2xl mx-auto">
+                    A timeline of my professional development, leadership roles, and academic achievements
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Experience Timeline -->
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-200 mb-8 flex items-center">
+                        <i class="fas fa-briefcase text-blue-400 mr-3"></i>
+                        Professional Experience
+                    </h3>
+                    <div class="space-y-8">
+                        <!-- DOST-ITDI Intern -->
+                        <div class="relative pl-8 border-l-2 border-blue-500">
+                            <div class="absolute -left-3 top-0 w-6 h-6 bg-blue-500 rounded-full border-2 border-navy-950"></div>
+                            <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-blue-500 transition-all duration-300">
+                                <div class="flex justify-between items-start mb-3">
+                                    <h4 class="text-lg font-semibold text-slate-200">Research Intern</h4>
+                                    <span class="text-sm text-blue-400 font-medium">Jun 2025 - Aug 2025</span>
+                                </div>
+                                <p class="text-blue-400 text-sm font-medium mb-3">DOST-ITDI, Materials Science Division</p>
+                                <ul class="text-slate-300 text-sm space-y-2">
+                                    <li>• Trained on 3D printing manufacturing workflow and research applications</li>
+                                    <li>• Applied materials knowledge to improve properties and optimize production</li>
+                                    <li>• Assisted in MAST3R projects across multiple engineering fields</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- UP Fair Director -->
+                        <div class="relative pl-8 border-l-2 border-cyan-500">
+                            <div class="absolute -left-3 top-0 w-6 h-6 bg-cyan-500 rounded-full border-2 border-navy-950"></div>
+                            <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300">
+                                <div class="flex justify-between items-start mb-3">
+                                    <h4 class="text-lg font-semibold text-slate-200">Director</h4>
+                                    <span class="text-sm text-cyan-400 font-medium">Nov 2024 - Apr 2025</span>
+                                </div>
+                                <p class="text-cyan-400 text-sm font-medium mb-3">UP Fair Kalye Tunes 2025</p>
+                                <ul class="text-slate-300 text-sm space-y-2">
+                                    <li>• Co-led execution of flagship hip-hop event advocating for urban communities</li>
+                                    <li>• Generated seven-figure sales and revenue with optimized cost management</li>
+                                    <li>• Managed cross-functional teams across 7+ specialized committees</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- National Summit Head -->
+                        <div class="relative pl-8 border-l-2 border-blue-500">
+                            <div class="absolute -left-3 top-0 w-6 h-6 bg-blue-500 rounded-full border-2 border-navy-950"></div>
+                            <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-blue-500 transition-all duration-300">
+                                <div class="flex justify-between items-start mb-3">
+                                    <h4 class="text-lg font-semibold text-slate-200">Head of Marketing & Finance</h4>
+                                    <span class="text-sm text-blue-400 font-medium">Dec 2024 - Apr 2025</span>
+                                </div>
+                                <p class="text-blue-400 text-sm font-medium mb-3">National Mining, Metallurgical & Materials Engineering Summit</p>
+                                <ul class="text-slate-300 text-sm space-y-2">
+                                    <li>• Secured 7 corporate partnerships and six-figure sponsorships</li>
+                                    <li>• Led corporate relations through strategic negotiations</li>
+                                    <li>• Managed comprehensive financial oversight and budget planning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Education & Skills -->
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-200 mb-8 flex items-center">
+                        <i class="fas fa-graduation-cap text-cyan-400 mr-3"></i>
+                        Education & Certifications
+                    </h3>
+                    <div class="space-y-6 mb-12">
+                        <!-- UP Diliman -->
+                        <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300">
+                            <h4 class="text-lg font-semibold text-slate-200 mb-2">University of the Philippines Diliman</h4>
+                            <p class="text-cyan-400 text-sm font-medium mb-2">BS Materials Engineering • Undergraduate</p>
+                            <p class="text-slate-400 text-sm">Focusing on advanced materials science, engineering principles, and sustainable technology solutions</p>
+                        </div>
+                        
+                        <!-- PSHS -->
+                        <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-blue-500 transition-all duration-300">
+                            <h4 class="text-lg font-semibold text-slate-200 mb-2">Philippine Science High School - Bicol</h4>
+                            <p class="text-blue-400 text-sm font-medium mb-2">Physics Track • Graduated 2019</p>
+                            <p class="text-slate-400 text-sm">Specialized education in science and mathematics with focus on physics and research methodology</p>
+                        </div>
+                        
+                        <!-- Certifications -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-slate-800/30 p-4 rounded-lg border border-slate-700">
+                                <i class="fas fa-certificate text-blue-400 mb-2"></i>
+                                <h5 class="text-slate-200 font-medium">Six Sigma White Belt</h5>
+                                <p class="text-slate-400 text-xs">Completed 2025</p>
+                            </div>
+                            <div class="bg-slate-800/30 p-4 rounded-lg border border-slate-700">
+                                <i class="fas fa-language text-cyan-400 mb-2"></i>
+                                <h5 class="text-slate-200 font-medium">EFSET C2 English</h5>
+                                <p class="text-slate-400 text-xs">Proficiency Certified</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Technical Skills -->
+                    <h3 class="text-2xl font-bold text-slate-200 mb-6 flex items-center">
+                        <i class="fas fa-cogs text-blue-400 mr-3"></i>
+                        Technical Skills
+                    </h3>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-slate-200 font-medium">Project Leadership</span>
+                                <i class="fas fa-users text-blue-400"></i>
+                            </div>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-slate-200 font-medium">3D Printing & Manufacturing</span>
+                                <i class="fas fa-cube text-cyan-400"></i>
+                            </div>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-slate-200 font-medium">Data Analysis (MATLAB)</span>
+                                <i class="fas fa-chart-line text-blue-400"></i>
+                            </div>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-slate-200 font-medium">Finance & Accounting</span>
+                                <i class="fas fa-calculator text-cyan-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Resume Section -->
+
+    <!-- @COMPONENT: Portfolio Section [project grid with hover effects] -->
+    <section id="portfolio" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-50 mb-4">Featured Projects</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto rounded-full"></div>
+                <p class="text-slate-400 mt-6 text-lg max-w-2xl mx-auto">
+                    Showcasing my work in materials engineering, project management, and research innovation
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1: UP Fair Kalye Tunes -->
+                <div class="group bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105">
+                    <!-- Hip-hop event production with stage and crowd -->
+                    <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" 
+                         alt="UP Fair Kalye Tunes Event Production" 
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" 
+                         data-mock="true">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-slate-200 mb-3">UP Fair Kalye Tunes 2025</h3>
+                        <p class="text-slate-400 text-sm mb-4">Led a flagship hip-hop event that generated seven-figure revenue while advocating for urban communities. Managed cross-functional teams and end-to-end project execution.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">Project Management</span>
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">Leadership</span>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">Event Production</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-200" data-implementation="Link to project details">
+                            View Details <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2: DOST Research -->
+                <div class="group bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
+                    <!-- Advanced 3D printing and materials research laboratory -->
+                    <img src="https://pixabay.com/get/g81579cbe2321203a145aa9d11d70674e9333821d60bb8b3fbaa27a0d3a905e4d3bd8dd540b21c56846f0cfc090cca8bc10c0dd4ecf47d8de195cf968b0c1499d_1280.jpg" 
+                         alt="3D Printing Research Laboratory" 
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" 
+                         data-mock="true">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-slate-200 mb-3">3D Printing Research</h3>
+                        <p class="text-slate-400 text-sm mb-4">Conducted materials research at DOST-ITDI focusing on optimizing 3D printing processes and exploring new applications in manufacturing and production.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">Materials Science</span>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">3D Printing</span>
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">Research</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200" data-implementation="Link to research details">
+                            View Research <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3: National Summit -->
+                <div class="group bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105">
+                    <!-- Professional conference with engineering professionals -->
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" 
+                         alt="National Engineering Summit Conference" 
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" 
+                         data-mock="true">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-slate-200 mb-3">National Engineering Summit</h3>
+                        <p class="text-slate-400 text-sm mb-4">Secured corporate partnerships and managed finances for a national summit connecting students with industry leaders in mining and materials engineering.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">Corporate Relations</span>
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">Finance</span>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">Marketing</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-200" data-implementation="Link to summit details">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 4: Materials Analysis -->
+                <div class="group bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
+                    <!-- Advanced materials analysis and testing equipment -->
+                    <img src="https://pixabay.com/get/gcd7b08ba6f1eef9668fda5cf6e90eb70225c04319ae67735d49ccc94fb3807bad12c2c18635f4be5a81eaefb0413f157aace278f7836a6095e68339f0d783bdd_1280.jpg" 
+                         alt="Materials Analysis Laboratory Equipment" 
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" 
+                         data-mock="true">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-slate-200 mb-3">MATLAB Data Analysis</h3>
+                        <p class="text-slate-400 text-sm mb-4">Developed analytical models using MATLAB for materials characterization and process optimization in manufacturing applications.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">MATLAB</span>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">Data Analysis</span>
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">Modeling</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200" data-implementation="Link to analysis portfolio">
+                            View Analysis <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 5: Process Improvement -->
+                <div class="group bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105">
+                    <!-- Manufacturing process optimization with industrial equipment -->
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" 
+                         alt="Manufacturing Process Optimization" 
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" 
+                         data-mock="true">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-slate-200 mb-3">Process Optimization</h3>
+                        <p class="text-slate-400 text-sm mb-4">Applied Six Sigma methodologies to improve manufacturing processes and reduce waste in materials production workflows.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">Six Sigma</span>
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">Process Improvement</span>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">Manufacturing</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-200" data-implementation="Link to process improvement case study">
+                            View Case Study <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 6: Academic Research -->
+                <div class="group bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
+                    <!-- Academic research publication and documentation -->
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" 
+                         alt="Academic Research and Documentation" 
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" 
+                         data-mock="true">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-slate-200 mb-3">Academic Research</h3>
+                        <p class="text-slate-400 text-sm mb-4">Contributed to materials engineering research publications and presented findings at academic conferences and symposiums.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">Research</span>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">Publications</span>
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">Presentations</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200" data-implementation="Link to academic portfolio">
+                            View Publications <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Portfolio Section -->
+
+    <!-- @COMPONENT: Contact Section [contact form and social links] -->
+    <section id="contact" class="py-20 bg-navy-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-50 mb-4">Let's Connect</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto rounded-full"></div>
+                <p class="text-slate-400 mt-6 text-lg max-w-2xl mx-auto">
+                    Ready to collaborate on innovative projects or discuss opportunities in materials engineering and project leadership
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700">
+                    <h3 class="text-2xl font-semibold text-slate-200 mb-6">Send a Message</h3>
+                    <form class="space-y-6" data-implementation="Contact form submission handler needed">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-3 bg-slate-900 border border-slate-600 rounded-lg text-slate-200 placeholder-slate-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all duration-200" placeholder="Your Name" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-slate-900 border border-slate-600 rounded-lg text-slate-200 placeholder-slate-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all duration-200" placeholder="your.email@example.com" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-slate-300 mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" class="w-full px-4 py-3 bg-slate-900 border border-slate-600 rounded-lg text-slate-200 placeholder-slate-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all duration-200" placeholder="Project Collaboration" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 bg-slate-900 border border-slate-600 rounded-lg text-slate-200 placeholder-slate-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all duration-200" placeholder="Tell me about your project or opportunity..." required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-blue-700 hover:to-cyan-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-blue-500/25">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-slate-200 mb-6">Get in Touch</h3>
+                        <p class="text-slate-400 text-lg mb-8">
+                            I'm always interested in discussing new opportunities, collaborations, and innovative projects in materials engineering and beyond.
+                        </p>
+                    </div>
+                    
+                    <!-- Contact Details -->
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-envelope text-blue-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-slate-200 font-medium">Email</h4>
+                                <p class="text-slate-400">afagnas@up.edu.ph</p>
+                                <p class="text-slate-400">agnasaljhone@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-phone text-cyan-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-slate-200 font-medium">Phone</h4>
+                                <p class="text-slate-400">+63 949-192-3652</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt text-blue-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-slate-200 font-medium">Location</h4>
+                                <p class="text-slate-400">Quezon City, Philippines</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="pt-8">
+                        <h4 class="text-lg font-medium text-slate-200 mb-4">Connect with me</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://linkedin.com/in/aljhoneagnas" target="_blank" class="w-12 h-12 bg-slate-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110" data-implementation="LinkedIn profile link">
+                                <i class="fab fa-linkedin-in text-slate-300 hover:text-white text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-slate-800 hover:bg-slate-700 rounded-lg flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110" data-implementation="GitHub profile link">
+                                <i class="fab fa-github text-slate-300 hover:text-white text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-slate-800 hover:bg-cyan-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110" data-implementation="Twitter profile link">
+                                <i class="fab fa-twitter text-slate-300 hover:text-white text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-slate-800 hover:bg-red-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110" data-implementation="Email contact link">
+                                <i class="fas fa-envelope text-slate-300 hover:text-white text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Contact Section -->
+
+    <!-- @COMPONENT: Footer [copyright and links] -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="text-2xl font-bold text-blue-400">AA</span>
+                        <span class="text-slate-300 font-medium">Aljhone Agnas</span>
+                    </div>
+                    <p class="text-slate-400 text-sm">
+                        Materials Engineering student and project leader committed to innovative solutions and sustainable development.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-slate-200 font-medium mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="#about" class="block text-slate-400 hover:text-blue-400 text-sm transition-colors duration-200">About</a>
+                        <a href="#resume" class="block text-slate-400 hover:text-blue-400 text-sm transition-colors duration-200">Resume</a>
+                        <a href="#portfolio" class="block text-slate-400 hover:text-blue-400 text-sm transition-colors duration-200">Portfolio</a>
+                        <a href="#contact" class="block text-slate-400 hover:text-blue-400 text-sm transition-colors duration-200">Contact</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-slate-200 font-medium mb-4">Professional</h4>
+                    <div class="space-y-2">
+                        <p class="text-slate-400 text-sm">UP Diliman</p>
+                        <p class="text-slate-400 text-sm">Materials Engineering</p>
+                        <p class="text-slate-400 text-sm">DOST-ITDI Research</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-400 text-sm">© 2025 Aljhone Agnas. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-slate-400 hover:text-blue-400 text-sm transition-colors duration-200" data-implementation="Privacy policy link">Privacy</a>
+                    <a href="#" class="text-slate-400 hover:text-blue-400 text-sm transition-colors duration-200" data-implementation="Terms of service link">Terms</a>
+                    <a href="#" class="text-slate-400 hover:text-blue-400 text-sm transition-colors duration-200" data-implementation="Sitemap link">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        // TODO: Implement business logic, API calls, or state management
+        (function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe sections for animations
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+
+            // Active navigation highlighting
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('section[id]');
+                const navLinks = document.querySelectorAll('.nav-link');
+                
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (window.pageYOffset >= sectionTop - 200) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('text-blue-400');
+                    link.classList.add('text-slate-300');
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.remove('text-slate-300');
+                        link.classList.add('text-blue-400');
+                    }
+                });
+            });
+
+            // Form submission placeholder
+            const contactForm = document.querySelector('form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // TODO: Implement actual form submission logic
+                    alert('Thank you for your message! I will get back to you soon.');
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
